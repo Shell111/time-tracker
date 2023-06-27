@@ -1,7 +1,7 @@
 [
   {
     "title": "Work",
-    "bg": "time",
+    "bg": "hsl(15, 100%, 70%)",
     "timeframes": {
       "daily": {
         "current": 5,
@@ -19,7 +19,7 @@
   },
   {
     "title": "Play",
-    "bg": "#fff",
+    "bg": "hsl(195, 74%, 62%)",
     "timeframes": {
       "daily": {
         "current": 1,
@@ -55,7 +55,7 @@
   },
   {
     "title": "Exercise",
-    "bg": "#fff",
+    "bg": "hsl(145, 58%, 55%)",
     "timeframes": {
       "daily": {
         "current": 1,
@@ -92,6 +92,7 @@
   {
     "title": "Self Care",
     "bg": "hsl(43, 84%, 65%)",
+
     "timeframes": {
       "daily": {
         "current": 0,

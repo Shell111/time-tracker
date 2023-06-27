@@ -1,11 +1,12 @@
-"use client";
+'use client'
+ 
+import { useState } from 'react'
 import styled from "styled-components";
 import "../app/styles/styles.css";
-import Image from 'next/image'
-import avatar from "./images/avatar.jpg"
-import "./data.json"
-
-
+import Image from 'next/image';
+import avatar from "./images/avatar.jpg";
+import Card from './components/Card';
+import CardGrid from './components/CardGrid';
 
 const Main = styled.main`
   margin-top: 200px;
@@ -28,13 +29,10 @@ const TitleCard = styled.div`
   margin-top: 0;
 `;
 
-const Card = styled.div`
+const NameSection = styled.div`
+  background-color: hsl(246, 80%, 60%);
+  padding: 24px 24px 70px 24px;
   border-radius: 12px;
-  background-color: hsl(235, 46%, 20%);
-  margin-top: 50px;
-  z-index: 3;
-  position: relative;
-  top: -7px;
 `;
 
 const ReportName = styled.h2`
@@ -47,36 +45,19 @@ const ReportSubTitle = styled.h2`
   font-weight: 300;
   color: hsl(236, 100%, 87%);
   font-size: 14px;
-  margin: 36px 0 10px 0;
+  margin: 36px 0 0 0;
 `;
 
-const CardTitle = styled.h2`
-  font-weight: 300;
-  font-size: 42px;
-  margin: 16px 0 12px 0;
+const Container = styled.div`
+  padding: 24px;
 `;
-const CardCategory = styled.h3`
-  font-weight: 300;
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
 
-`;
 
 const CardTimeframe = styled.p`
   font-weight: 300;
   font-size: 18px;
   color: hsl(236, 100%, 87%);
-`;
-
-const NameSection = styled.div`
-  background-color: hsl(246, 80%, 60%);
-  padding: 24px 24px 70px 24px;
-  border-radius: 12px;
-  
-`;
-const Container = styled.div`
-  padding: 24px;
+  margin: 6px 0px 12px 0px;
 `;
 
 const BackgroundCard = styled.div`
@@ -197,7 +178,19 @@ const data = [
   }
 ]
 
-export default function Home() {
+
+const timeframes = ["daily", "weekly", "monthly"]
+
+
+export default function Home(localData) {
+
+
+  const [timeframe, setTimeframe] = useState("Weekly")
+
+  const handleClick = (e) =>{
+    setTimeframe(e.target.innerText)
+  }
+  console.log(data, 'data')
 
   return (
     <div>
@@ -213,25 +206,16 @@ export default function Home() {
             <ReportName>Jeanene Robson</ReportName>
           </NameSection>
           <Container>
-            <CardTimeframe>Daily</CardTimeframe>
-            <CardTimeframe>Weekly</CardTimeframe>
-            <CardTimeframe>Monthly</CardTimeframe>
+            {timeframes.map(timeframe => (
+              <CardTimeframe handleClick={handleClick
+              }>{timeframe}</CardTimeframe>
+            ))}
           </Container>
         </TitleCard>
-          {data.map((item, index) => (
-            <BackgroundCard style={{ backgroundColor: item.bg }}>
-              <Card>
-                <Container>
-                  <CardCategory>
-                    {item.title} 
-                    <div>...</div>
-                  </CardCategory>
-                  <CardTitle>{item.timeframes.daily.current}hrs </CardTitle>
-                  <CardTimeframe>Last {item.timeframes.daily ? "day" : ""} - {item.timeframes.daily.previous}hrs </CardTimeframe>
-                </Container>
-              </Card>
-            </BackgroundCard>
-          ))}
+        <CardGrid
+          data={data}
+          key={data.title}
+        />
       </Main>
     </div>
   )
