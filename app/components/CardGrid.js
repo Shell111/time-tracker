@@ -10,19 +10,19 @@ const BackgroundCard = styled.div`
 export default function CardGrid({data}){
   return (
     <>
-  {data.map((item, index) => (
-      <BackgroundCard style={{ backgroundColor: item.bg }}>
-        <Card 
-        idx={index}
-        item={item}
-        title={item.title}
-        current={item.timeframes.daily.current}
-        previous={item.timeframes.daily.previous}
-        timeframes={item.timeframes.daily}
-        />
-      </BackgroundCard> 
-  ))
-  }
-  </>
+      {data.map((item, index) => (
+          <BackgroundCard style={{ backgroundColor: item.bg }}>
+            <Card 
+            idx={index}
+            item={item}
+            title={item.title}
+            current={item.timeframes.daily.current}
+            previous={item.timeframes.daily.previous}
+            timeframes={item.timeframes.daily}
+            />
+          </BackgroundCard> 
+        ))
+      }
+    </>
   )
 };
