@@ -1,17 +1,16 @@
 import styled from "styled-components";
 
-
 const CardStyle = styled.div`
   border-radius: 12px;
   background-color: hsl(235, 46%, 20%);
   margin-top: 50px;
   z-index: 3;
   position: relative;
-  top: -7px;
-`;
+  height: 200px;
 
-const Container = styled.div`
-  padding: 24px;
+  @media (max-width: 600px) {
+    height: 130px;
+  }
 `;
 
 const CardTitle = styled.h2`
@@ -26,29 +25,52 @@ const CardCategory = styled.h3`
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 600px) {
+    margin: 0px;
+  }
 `;
 
 const CardTimeframe = styled.p`
   font-weight: 300;
   font-size: 18px;
   color: hsl(236, 100%, 87%);
-  margin: 6px 0px 12px 0px;
+  padding: 0 0 20px 0;
+  margin: 6px 0px 0px 0px;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+    margin: 0px;
+  }
 `;
 
-export default function Card({item}) {
+const Container = styled.div`
+  padding: 18px;
+`;
 
-  return(
+const TimeContainer = styled.div`
+  @media (max-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+`;
+
+
+function Card({ title, currentTime, prevTime, time }) {
+  return (
     <CardStyle>
       <Container>
-        <CardCategory>
-          {item.title}
-          <div>...</div>
-        </CardCategory>
-        <CardTitle>{item.timeframes.daily.current}hrs </CardTitle>
-        <CardTimeframe>
-          Last {item.timeframes ? "Day" : ""} - {item.timeframes.daily.previous}hrs 
-        </CardTimeframe>
+          <CardCategory>
+            {title}
+            <div>...</div>
+          </CardCategory>
+            <TimeContainer>
+              <CardTitle>{currentTime}hrs</CardTitle>
+              <CardTimeframe>{time} - {prevTime} hours</CardTimeframe>
+            </TimeContainer>
       </Container>
     </CardStyle>
-  )
-};
+  );
+}
+
+export default Card;

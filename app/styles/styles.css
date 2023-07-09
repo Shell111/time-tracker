@@ -23,7 +23,13 @@ body {
   background-color: black;
   font-size: 18px;
   margin: 0 auto;
-  width: 1000px;
+  /* max-width: 1000px; */
 }
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
 
 

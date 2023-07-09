@@ -1,28 +1,37 @@
-import styled from "styled-components";
 import Card from "./Card";
+import styled from "styled-components";
 
 const BackgroundCard = styled.div`
-  height: 50px;
-  border-radius: 12px 12px 0 0;    
+  height: 250px;
+  border-radius: 12px;    
   position: relative;
+
+  @media (max-width: 600px) {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    height: 100px;
+;
+  }
 `;
 
-export default function CardGrid({data}){
+function CardGrid({ data, time }) {
+  let timePeriod = time === "daily" ? "Yesterday" : time === "weekly" ? "Last week" : "Last month";
+
   return (
     <>
-      {data.map((item, index) => (
+      {data.map((item, idx) => (
           <BackgroundCard style={{ backgroundColor: item.bg }}>
-            <Card 
-            idx={index}
-            item={item}
-            title={item.title}
-            current={item.timeframes.daily.current}
-            previous={item.timeframes.daily.previous}
-            timeframes={item.timeframes.daily}
+            <Card
+              key={idx}
+              title={item.title}
+              prevTime={item.timeframes[time].previous}
+              currentTime={item.timeframes[time].current}
+              time={timePeriod}
             />
-          </BackgroundCard> 
-        ))
-      }
+          </BackgroundCard>
+      ))}
     </>
-  )
-};
+  );
+}
+
+export default CardGrid;
