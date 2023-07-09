@@ -39,7 +39,7 @@ const ImageWrapper = styled.div`
 
 const NameSection = styled.div`
   background-color: hsl(246, 80%, 60%);
-  padding: 24px 24px 70px 24px;
+  padding: 24px 24px 60px 24px;
   border-radius: 12px;
 
   @media (max-width: 600px) {
