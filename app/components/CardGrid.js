@@ -19,13 +19,13 @@ function CardGrid({ data, time }) {
 
   return (
     <>
-      {data.map((item, idx) => (
+      {data.map((item) => (
           <BackgroundCard style={{ backgroundColor: item.bg }}>
             <Card
-              key={idx}
+              key={item.title}
               title={item.title}
-              prevTime={item.timeframes[time].previous}
-              currentTime={item.timeframes[time].current}
+              previousHours={item.timeframes[time].previous}
+              currentHours={item.timeframes[time].current}
               time={timePeriod}
             />
           </BackgroundCard>

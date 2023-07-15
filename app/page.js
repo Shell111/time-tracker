@@ -11,7 +11,7 @@ const Main = styled.main`
   margin: 200px auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 1100px;
+  max-width: 1000px;
   gap: 20px 18px ;
   color: #fff;
 
@@ -63,8 +63,7 @@ const ProfileName = styled.h2`
   font-size: 36px;
 
   @media (max-width: 600px) {
-    font-size: 24px;
-    
+    font-size: 24px;    
   }
 `;
 
@@ -102,10 +101,7 @@ const List = styled.ul`
 
 const Button = styled.button`
   padding: 6px 0px;
-
 `
-
-
 
 const data = [
   {
@@ -221,18 +217,18 @@ const data = [
 
 
 export default function Home() {
-  const [timeframes, setTimeframes] = useState("weekly")
-  const [active, setActive] = useState(false);
+  const [timeframes, setTimeframes] = useState("daily")
+  const [activeLink, setActiveLink] = useState(1);
 
-  const handleClick = () => {
-    setActive(!active); // Toggle the active link
+  const handleLinkClick = (linkNumber) => {
+    setActiveLink(linkNumber);
   };
   
   let time = "weekly"
-  const handleToggle = ({target}) => {
-    time = target.innerText.toLowerCase();
+
+  const handleToggle = (event) => {
+    time = event.target.innerText.toLowerCase();
     setTimeframes(time)
-    setActive(!active);
   }
 
 
@@ -242,7 +238,8 @@ export default function Home() {
         <TitleCard className="title-cell-1">
           <NameSection>
             <ImageWrapper>
-              <Image src={avatar}     
+              <Image src={avatar} 
+                alt="profile-image"    
                 width={70}
                 height={70}
                 style={{borderRadius: '50%', objectFit: 'cover', border: '3px solid #fff'}}
@@ -255,29 +252,26 @@ export default function Home() {
           </NameSection>
           <Container>
             <List>
-              <li>
-                <Button 
-                  onClick={handleToggle} 
-                  className={time === "daily" ? "active" : ""} 
-                  >
-                    Daily
-                </Button>
+              <li
+                key={1}
+                style={{ fontWeight: activeLink === 1 ? '500' : '300' }}
+                onClick={() => handleLinkClick(1)}
+                >
+                <Button onClick={handleToggle}>Daily</Button>
               </li>
-              <li>
-                <Button 
-                  onClick={handleToggle} 
-                  className={time === "weekly" ? "active" : ""}              
-                  >
-                  Weekly
-                </Button>
+              <li
+                key={2}
+                style={{ fontWeight: activeLink === 2 ? '500' : '300' }}
+                onClick={() => handleLinkClick(2)}
+                >
+                <Button onClick={handleToggle}>Weekly</Button>
               </li>
-              <li>
-                <Button 
-                  onClick={handleToggle} 
-                  className={time === "monthly" ? "active" : ""}
-                  >       
-                    Monthly
-                </Button>
+              <li 
+                key={3}
+                style={{ fontWeight: activeLink === 3 ? '500' : '300' }}
+                onClick={() => handleLinkClick(3)}
+                >
+                <Button onClick={handleToggle}>Monthly</Button>
               </li>
             </List>
           </Container>

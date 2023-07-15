@@ -56,7 +56,7 @@ const TimeContainer = styled.div`
 `;
 
 
-function Card({ title, currentTime, prevTime, time }) {
+function Card({ title, currentHours, previousHours, time }) {
   return (
     <CardStyle>
       <Container>
@@ -65,8 +65,8 @@ function Card({ title, currentTime, prevTime, time }) {
             <div>...</div>
           </CardCategory>
             <TimeContainer>
-              <CardTitle>{currentTime}hrs</CardTitle>
-              <CardTimeframe>{time} - {prevTime} hours</CardTimeframe>
+              <CardTitle>{currentHours}hrs</CardTitle>
+              <CardTimeframe>{time} - {previousHours} hours</CardTimeframe>
             </TimeContainer>
       </Container>
     </CardStyle>
