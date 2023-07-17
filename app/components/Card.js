@@ -6,9 +6,9 @@ const CardStyle = styled.div`
   margin-top: 50px;
   z-index: 3;
   position: relative;
-  height: 200px;
+  height: 190px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     height: 130px;
   }
 `;
@@ -25,19 +25,19 @@ const CardCategory = styled.h3`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     margin: 0px;
   }
 `;
 
 const CardTimeframe = styled.p`
   font-weight: 300;
-  font-size: 18px;
-  color: hsl(236, 100%, 87%);
+  font-size: 16px;
+  color: hsl(235, 45%, 61%);
   padding: 0 0 20px 0;
   margin: 6px 0px 0px 0px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     font-size: 14px;
     margin: 0px;
   }
@@ -48,7 +48,7 @@ const Container = styled.div`
 `;
 
 const TimeContainer = styled.div`
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

@@ -7,6 +7,8 @@ import CardGrid from './components/CardGrid';
 import Image from 'next/image';
 import avatar from "./images/avatar.jpg"
 
+
+
 const Main = styled.main`
   margin: 200px auto;
   display: grid;
@@ -15,7 +17,7 @@ const Main = styled.main`
   gap: 20px 18px ;
   color: #fff;
 
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     grid-template-columns: 1fr;
     gap: 0px;
     padding: 10px 10px;
@@ -39,21 +41,21 @@ const ImageWrapper = styled.div`
 
 const NameSection = styled.div`
   background-color: hsl(246, 80%, 60%);
-  padding: 24px 24px 60px 24px;
+  padding: 24px 24px 24px 24px;
   border-radius: 12px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     padding-bottom: 20px;
     display: flex;
   }
 `;
 
 const ProfileWrapper = styled.div`
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
   }
 `;
 
@@ -62,7 +64,7 @@ const ProfileName = styled.h2`
   margin-top: 0;
   font-size: 36px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     font-size: 24px;    
   }
 `;
@@ -73,7 +75,7 @@ const ReportSubTitle = styled.h2`
   font-size: 14px;
   margin: 36px 0 0 0;
 
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     margin-top: 0;
   }
 `;
@@ -81,7 +83,7 @@ const ReportSubTitle = styled.h2`
 const Container = styled.div`
   padding: 24px;
 
-  @media (max-wdith: 600px) {
+  @media (max-wdith: 730px) {
     padding: 8px 24px;
   }
 `;
@@ -90,9 +92,10 @@ const List = styled.ul`
   padding-left: 0px;
   li {
     list-style-type: none;
+    font-weight: 300;
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -100,7 +103,7 @@ const List = styled.ul`
 `
 
 const Button = styled.button`
-  padding: 6px 0px;
+  padding: 9px 0px;
 `
 
 const data = [
@@ -254,21 +257,21 @@ export default function Home() {
             <List>
               <li
                 key={1}
-                style={{ fontWeight: activeLink === 1 ? '500' : '300' }}
+                style={{ color: activeLink === 1 ? '#eeee' : '#6f76c8' }}
                 onClick={() => handleLinkClick(1)}
                 >
                 <Button onClick={handleToggle}>Daily</Button>
               </li>
               <li
                 key={2}
-                style={{ fontWeight: activeLink === 2 ? '500' : '300' }}
+                style={{ color: activeLink === 2 ? '#eeee' : '#6f76c8' }}
                 onClick={() => handleLinkClick(2)}
                 >
                 <Button onClick={handleToggle}>Weekly</Button>
               </li>
               <li 
                 key={3}
-                style={{ fontWeight: activeLink === 3 ? '500' : '300' }}
+                style={{ color: activeLink === 3 ? '#eeee' : '#6f76c8' }}
                 onClick={() => handleLinkClick(3)}
                 >
                 <Button onClick={handleToggle}>Monthly</Button>

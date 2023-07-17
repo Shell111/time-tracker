@@ -2,11 +2,11 @@ import Card from "./Card";
 import styled from "styled-components";
 
 const BackgroundCard = styled.div`
-  height: 250px;
+  height: 220px;
   border-radius: 12px;    
   position: relative;
 
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     margin-top: 20px;
     margin-bottom: 80px;
     height: 100px;
@@ -15,7 +15,7 @@ const BackgroundCard = styled.div`
 `;
 
 function CardGrid({ data, time }) {
-  let timePeriod = time === "daily" ? "Yesterday" : time === "weekly" ? "Last week" : "Last month";
+  let timePeriod = time === "daily" ? "Previous" : time === "weekly" ? "Last week" : "Last month";
 
   return (
     <>
