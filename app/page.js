@@ -12,7 +12,7 @@ import avatar from "./images/avatar.jpg"
 const Main = styled.main`
   margin: 200px auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, calc(25% - 20px));;
   max-width: 1000px;
   gap: 20px 18px ;
   color: #fff;
