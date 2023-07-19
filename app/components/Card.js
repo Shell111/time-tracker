@@ -6,10 +6,10 @@ const CardStyle = styled.div`
   margin-top: 3rem;
   z-index: 3;
   position: relative;
-  height: 16.5vh;
+  height: 21vh;
 
   @media (max-width: 730px) {
-    height: 13vh;
+    height: 15vh;
   }
 `;
 
