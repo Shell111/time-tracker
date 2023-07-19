@@ -8,7 +8,6 @@ import Image from 'next/image';
 import avatar from "./images/avatar.jpg"
 
 
-
 const Main = styled.main`
   margin: 200px auto;
   display: grid;
@@ -17,9 +16,17 @@ const Main = styled.main`
   gap: 20px 18px ;
   color: #fff;
 
-  @media (max-width: 730px) {
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 10px 10px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 560px) {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 0px;
+    gap: 1rem;
     padding: 10px 10px;
     margin: 0 auto;
   }
@@ -33,6 +40,10 @@ const TitleCard = styled.div`
   grid-row-end: 3;
   margin-top: 0;
 
+  @media (max-width: 960px) and (min-width: 560px) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -44,14 +55,14 @@ const NameSection = styled.div`
   padding: 24px 24px 24px 24px;
   border-radius: 12px;
 
-  @media (max-width: 730px) {
+  @media (max-width: 960px) {
     padding-bottom: 20px;
     display: flex;
   }
 `;
 
 const ProfileWrapper = styled.div`
-  @media (max-width: 730px) {
+  @media (max-width: 960px) {
     padding-left: 10px;
     display: flex;
     flex-direction: column;
@@ -64,7 +75,7 @@ const ProfileName = styled.h2`
   margin-top: 0;
   font-size: 36px;
 
-  @media (max-width: 730px) {
+  @media (max-width: 960px) {
     font-size: 24px;    
   }
 `;
@@ -75,7 +86,7 @@ const ReportSubTitle = styled.h2`
   font-size: 14px;
   margin: 36px 0 0 0;
 
-  @media (max-width: 730px) {
+  @media (max-width: 960px) {
     margin-top: 0;
   }
 `;
@@ -83,7 +94,7 @@ const ReportSubTitle = styled.h2`
 const Container = styled.div`
   padding: 24px;
 
-  @media (max-wdith: 730px) {
+  @media (max-wdith: 960px) {
     padding: 8px 24px;
   }
 `;
@@ -94,8 +105,8 @@ const List = styled.ul`
     list-style-type: none;
     font-weight: 300;
   }
-  
-  @media (max-width: 730px) {
+
+  @media (max-width: 960px) {
     display: flex;
     justify-content: space-between;
     margin: 0;

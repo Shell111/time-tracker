@@ -6,11 +6,10 @@ const BackgroundCard = styled.div`
   border-radius: 12px;    
   position: relative;
 
-  @media (max-width: 730px) {
+  @media (max-width: 960px) {
     margin-top: 20px;
     margin-bottom: 80px;
-    height: 11vh;
-;
+    height: 100px;
   }
 `;
 

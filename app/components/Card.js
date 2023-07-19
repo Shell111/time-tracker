@@ -6,10 +6,10 @@ const CardStyle = styled.div`
   margin-top: 3rem;
   z-index: 3;
   position: relative;
-  height: 21vh;
+  height: 190px;
 
-  @media (max-width: 730px) {
-    height: 15vh;
+  @media (max-width: 960px) {
+    height: 140px;
   }
 `;
 
@@ -25,7 +25,7 @@ const CardCategory = styled.h3`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 730px) {
+  @media (max-width: 960px) {
     margin: 0px;
   }
 `;
@@ -37,7 +37,7 @@ const CardTimeframe = styled.p`
   padding: 0 0 20px 0;
   margin: .6rem 0px 0px 0px;
 
-  @media (max-width: 730px) {
+  @media (max-width: 960px) {
     font-size: .8rem;
     margin: 0px;
   }
@@ -48,7 +48,7 @@ const Container = styled.div`
 `;
 
 const TimeContainer = styled.div`
-  @media (max-width: 730px) {
+  @media (max-width: 960px) {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
