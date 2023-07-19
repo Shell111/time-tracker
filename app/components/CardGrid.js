@@ -2,14 +2,14 @@ import Card from "./Card";
 import styled from "styled-components";
 
 const BackgroundCard = styled.div`
-  height: 220px;
+  height: 11.5vh;
   border-radius: 12px;    
   position: relative;
 
   @media (max-width: 730px) {
     margin-top: 20px;
     margin-bottom: 80px;
-    height: 100px;
+    height: 11vh;
 ;
   }
 `;

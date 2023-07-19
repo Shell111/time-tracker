@@ -3,25 +3,25 @@ import styled from "styled-components";
 const CardStyle = styled.div`
   border-radius: 12px;
   background-color: hsl(235, 46%, 20%);
-  margin-top: 50px;
+  margin-top: 3rem;
   z-index: 3;
   position: relative;
-  height: 190px;
+  height: 16.5vh;
 
   @media (max-width: 730px) {
-    height: 130px;
+    height: 13vh;
   }
 `;
 
 const CardTitle = styled.h2`
   font-weight: 300;
-  font-size: 42px;
-  margin: 16px 0 8px 0;
+  font-size: 3rem;
+  margin: 1rem 0 0.5rem 0;
 `;
 
 const CardCategory = styled.h3`
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
 
@@ -32,19 +32,19 @@ const CardCategory = styled.h3`
 
 const CardTimeframe = styled.p`
   font-weight: 300;
-  font-size: 16px;
+  font-size: .9rem;
   color: hsl(235, 45%, 61%);
   padding: 0 0 20px 0;
-  margin: 6px 0px 0px 0px;
+  margin: .6rem 0px 0px 0px;
 
   @media (max-width: 730px) {
-    font-size: 14px;
+    font-size: .8rem;
     margin: 0px;
   }
 `;
 
 const Container = styled.div`
-  padding: 18px;
+  padding: 1.2rem;
 `;
 
 const TimeContainer = styled.div`
