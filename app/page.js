@@ -23,7 +23,7 @@ const Main = styled.main`
     margin: 0 auto;
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: 720px) {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -40,7 +40,7 @@ const TitleCard = styled.div`
   grid-row-end: 3;
   margin-top: 0;
 
-  @media (max-width: 960px) and (min-width: 560px) {
+  @media (max-width: 960px) and (min-width: 721px) {
     grid-column-start: 1;
     grid-column-end: 3;
   }
