@@ -67,6 +67,11 @@ const ProfileWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @media (max-width: 960px) {
+      margin: 1rem 0 0 1rem;
+    }
+
   }
 `;
 
@@ -76,7 +81,8 @@ const ProfileName = styled.h2`
   font-size: 36px;
 
   @media (max-width: 960px) {
-    font-size: 24px;    
+    font-size: 1.8rem;
+    margin-top: .2rem;  
   }
 `;
 
