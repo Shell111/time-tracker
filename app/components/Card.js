@@ -6,7 +6,6 @@ const CardStyle = styled.div`
   margin-top: 3rem;
   z-index: 3;
   position: relative;
-  height: 190px;
 
   @media (max-width: 960px) {
     height: 140px;
@@ -34,7 +33,7 @@ const CardTimeframe = styled.p`
   font-weight: 300;
   font-size: .9rem;
   color: hsl(235, 45%, 61%);
-  padding: 0 0 20px 0;
+  padding: 0 0 10px 0;
   margin: .6rem 0px 0px 0px;
 
   @media (max-width: 960px) {

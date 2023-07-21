@@ -2,7 +2,6 @@ import Card from "./Card";
 import styled from "styled-components";
 
 const BackgroundCard = styled.div`
-  height: 11.5vh;
   border-radius: 12px;    
   position: relative;
 
