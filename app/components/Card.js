@@ -38,7 +38,7 @@ const CardTimeframe = styled.p`
   margin: .6rem 0px 0px 0px;
 
   @media (max-width: 960px) {
-    font-size: .8rem;
+    font-size: .9rem;
     margin: 0px;
   }
 `;
