@@ -4,17 +4,24 @@ import { useState } from 'react'
 import styled from "styled-components";
 import "../app/styles/styles.css";
 import CardGrid from './components/CardGrid';
+import Footer from './components/Footer'
 import Image from 'next/image';
 import avatar from "./images/avatar.jpg"
 
+// const PageLayout = styled.div`
+//   // background-color: #eee;
+//   // margin: 200px 200px;
+//   padding: 20px;
+
+// `;
 
 const Main = styled.main`
-  margin: 200px auto;
   display: grid;
   grid-template-columns: repeat(4, calc(25% - 20px));
   max-width: 1000px;
-  gap: 20px 18px ;
+  gap: 20px 18px;
   color: #fff;
+  margin: 150px auto;
 
   @media (max-width: 960px) {
     grid-template-columns: 1fr 1fr;
@@ -301,6 +308,7 @@ export default function Home() {
           time={timeframes}
         />
       </Main>
+      <Footer/>
     </div>
   )
 }

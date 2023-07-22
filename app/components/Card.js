@@ -31,13 +31,12 @@ const CardCategory = styled.h3`
 
 const CardTimeframe = styled.p`
   font-weight: 300;
-  font-size: .9rem;
-  color: hsl(235, 45%, 61%);
+  font-size: 1rem;
+  color: hsl(236, 100%, 87%);
   padding: 0 0 10px 0;
   margin: .6rem 0px 0px 0px;
 
   @media (max-width: 960px) {
-    font-size: .9rem;
     margin: 0px;
   }
 `;
@@ -65,7 +64,7 @@ function Card({ title, currentHours, previousHours, time }) {
           </CardCategory>
             <TimeContainer>
               <CardTitle>{currentHours}hrs</CardTitle>
-              <CardTimeframe>{time} - {previousHours} hours</CardTimeframe>
+              <CardTimeframe>{time} - {previousHours} hrs</CardTimeframe>
             </TimeContainer>
       </Container>
     </CardStyle>
