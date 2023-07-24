@@ -78,7 +78,6 @@ const ProfileWrapper = styled.div`
     @media (max-width: 960px) {
       margin: 1rem 0 0 1rem;
     }
-
   }
 `;
 
@@ -128,6 +127,8 @@ const List = styled.ul`
 
 const Button = styled.button`
   padding: 9px 0px;
+  font-size: 1.2rem;
+
 `
 
 const data = [
