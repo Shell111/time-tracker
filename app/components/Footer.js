@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Link from 'next/link';
 
 const FooterSection = styled.footer`
-  // background-color: #f497da;
   border-top: 2px solid #f65be3; 
   height: 12vh;
   padding: 0 30px 10px 30px;
@@ -45,7 +44,6 @@ const LinkStyle = styled.div`
 
   &:hover {
     box-shadow: 1px 1px #f497da;
-    // transition: ease-in-out 0.5s;
   }
 
   a {
@@ -62,7 +60,7 @@ export default function Footer() {
         <FooterWrapper>
           <LinkWrapper>
             <LinkStyle>
-              <Link href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor challenges</Link>
+              <Link href="https://www.frontendmentor.io/" target="_blank">Challenge by Frontend Mentor</Link>
             </LinkStyle>
             <ProfileWrapper>
               <LinkStyle>
