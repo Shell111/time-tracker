@@ -8,13 +8,6 @@ import Footer from './components/Footer'
 import Image from 'next/image';
 import avatar from "./images/avatar.jpg"
 
-// const PageLayout = styled.div`
-//   // background-color: #eee;
-//   // margin: 200px 200px;
-//   padding: 20px;
-
-// `;
-
 const Main = styled.main`
   display: grid;
   grid-template-columns: repeat(4, calc(25% - 20px));
