@@ -4,7 +4,7 @@ import Link from 'next/link';
 const FooterSection = styled.footer`
   border-top: 2px solid #f65be3; 
   height: 12vh;
-  padding: 0 30px 10px 30px;
+  margin-top: 50px;
 `
 const FooterWrapper = styled.div`
   max-width: 1000px;
@@ -16,12 +16,12 @@ const LinkWrapper = styled.div`
   justify-content: space-between;
   padding: 2rem 0 0 0;
 
-  h2 {
-    font-weight: 300;
-    font-size: 1rem;
-    letter-spacing: .07rem;
-    text-transform: uppercase;
-  }
+  @media (max-width: 760px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  } 
 `;
 
 const ProfileWrapper = styled.div`
@@ -30,13 +30,13 @@ const ProfileWrapper = styled.div`
 
 const LinkStyle = styled.div`
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: .07rem;
   text-transform: uppercase;
   border: 1px solid black;
-  padding: 1rem 1.4rem;
+  padding: 0.8rem 1.4rem;
   border-radius: 9px;
-  box-shadow: 8px 8px #f65be3;
+  box-shadow: 4px 4px #f65be3;
   background-color: #f497da;
   margin-right: 30px;
   text-decoration: none;
@@ -44,13 +44,13 @@ const LinkStyle = styled.div`
 
   &:hover {
     box-shadow: 1px 1px #f497da;
-  }
+  };
 
   a {
     text-decoration: none;
-    color: black
-  }
-`
+    color: black;
+  };
+`;
 
 export default function Footer() {
 
@@ -60,7 +60,7 @@ export default function Footer() {
         <FooterWrapper>
           <LinkWrapper>
             <LinkStyle>
-              <Link href="https://www.frontendmentor.io/" target="_blank">Challenge by Frontend Mentor</Link>
+              <Link href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor Challenge</Link>
             </LinkStyle>
             <ProfileWrapper>
               <LinkStyle>
